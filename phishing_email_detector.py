@@ -1,8 +1,8 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Blake Lemarr
+# DATE: 03/02/2026
+# BRIEF DESCRIPTION: Detects the likelihood of an email being a phishing attempt 
 
 
 
@@ -15,14 +15,20 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+subject_line: str = input("Enter the email subject line: ")
 
+print("SECURITY ASSESSMENT:")
 
+if "urgent" in subject_line.lower() or "immediate action required" in subject_line.lower():
+    print("HIGH RISK: Possible phishing attempt.")
+elif "win" in subject_line.lower() or "free" in subject_line.lower():
+    print("MEDIUM RISK: Suspicious offer detected.")
+elif "password reset" in subject_line.lower():
+    print("LOW RISK: Verify legitimacy with sender.")
+else:
+    print("No phishing indicators detected.")
 
-
-
-
-
-
+print(f"------------------------\nAnalyzed subject: \"{subject_line}\"")
 
 ########### END YER CODE ABOVE THIS LINE ###########
 
@@ -78,11 +84,7 @@ Analyzed subject: "Did you request a password reset?"
 
 1. Was using `in` difficult or was it natural?
 
-
-
-
-
-
+No, it was pretty natural. It's one of the things that I really appreciate about Python.
 
 '''
 
@@ -97,7 +99,7 @@ Analyzed subject: "Did you request a password reset?"
 Please gauge your utilization of AI on the following spectrum. Place an "X" in front
 of the appropriate response. Only choose one of the following:
 
-[ ] I did not use AI at all for this lab.
+[X] I did not use AI at all for this lab.
 [ ] I wrote the initial draft of the software but had AI help me make it better.
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
@@ -112,6 +114,6 @@ may impede your understanding. Please rate how well you understand the concepts 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
 [ ] I pretty much get it.
-[ ] I'm solid. Totally got it.
+[X] I'm solid. Totally got it.
 
 '''
